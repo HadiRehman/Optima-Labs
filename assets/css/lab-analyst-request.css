@@ -1,0 +1,317 @@
+body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+    }
+
+    .banner {
+      background: url('../images/lab.jpeg') no-repeat center center/cover;
+      height: 50vh;
+      position: relative;
+      color: white;
+    }
+
+    .overlay {
+      background: rgba(0, 50, 70, 0.6);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+    }
+
+    .banner-content p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .banner-content button {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 12px 25px;
+      margin: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .banner-content button:hover {
+      background: white;
+      color: #00324a;
+    }
+
+    .about-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      max-width: 1250px;
+      margin: auto;
+      gap: 100px;
+    }
+
+    .about-img {
+      position: relative;
+      width: 500px;
+    }
+
+    .about-img img.bg {
+      position: absolute;
+      top: 20px;
+     right: 20px;
+      width: 100%;
+      border-radius: 10px;
+      background-color: #dff7fd;
+      z-index: 1;
+      opacity: 0.3;
+      height: 500px;
+    }
+
+    .about-img img.main {
+      position: relative;
+      width: 100%;
+      border-radius: 10px;
+      z-index: 2;
+      height: 500px;
+    }
+
+    .about-content {
+      max-width: 700px;
+
+    }
+
+    .about-content h2 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .about-content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .about-list {
+      /*list-style: none;*/
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .about-list li {
+      /*display: flex;*/
+      align-items: left;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #222;
+    }
+
+    .about-list li::before {
+    
+      color: #00c6ff;
+      margin-right: 12px;
+      font-size: 18px;
+    }
+
+    .about-btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .about-btn:hover {
+      background: #0056b3;
+    }
+
+    .section {
+      background: linear-gradient(90deg, #5288be, #0055a5);
+      color: white;
+      border-radius: 20px;
+      padding: 50px 20px;
+      max-width: 1250px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .divider {
+      border-top: 1px dashed rgba(255, 255, 255, 0.5);
+      margin: 20px 0;
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      text-align:left;
+    }
+
+    .column {
+      flex: 1 1 250px;
+      max-width: 550px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: white;
+      color: #003366;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e6e6e6;
+    }
+    .consultation-card {
+      background: linear-gradient(to left, #0984e3, #ffffff);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      border-radius: 10px;
+      max-width: 1250px;
+      margin: 40px auto;
+      box-sizing: border-box;
+      margin-bottom: 50px;
+    }
+
+    .consultation-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .consultation-icon {
+      background-color: #d9e9ff;
+      color: #003399;
+      font-size: 22px;
+      padding: 12px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .consultation-title {
+      font-size: 1.3rem;
+      color: #00000;
+      font-weight: bold;
+    }
+
+    .consultation-text {
+      flex: 2;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.5;
+      margin-left: 20px;
+    }
+
+    .btn-consultation {
+      background-color: white;
+      color: #003366;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-consultation:hover {
+      background-color: #e6e6e6;
+    }
+    
+    @media (max-width: 768px) {
+      .consultation-card {
+          background: linear-gradient(to right, #0984e3, #ffffff);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+    
+      .consultation-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    
+      .consultation-text {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    
+      .btn-consultation {
+        margin-top: 20px;
+        width: 80%;
+        text-align: center;
+      }
+    }
+
+
+    @media (max-width: 900px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-img {
+        width: 80%;
+      }
+
+      .about-content {
+        padding-top: 20px;
+      }
+    }

@@ -89,6 +89,7 @@ $img = !empty($blog['featured_image'])
   <a href="index.php">Home</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
+<a href="blogs.php">Blogs</a>
   <a href="lab-analyst-request.html">Lab Analysis Request</a>
   <a href="blogs.php">Blogs</a>
 </div>

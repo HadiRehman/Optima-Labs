@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+// ✅ Admin Auth (redirect if not logged in)
+if (!isset($_SESSION['username']) || trim($_SESSION['username']) === '') {
+    header("Location: login.php");
+    exit();
+}
+
 require('../config/connection.php');
 
 // Check DB connection

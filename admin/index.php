@@ -1,6 +1,12 @@
 <?php
-require('../config/connection.php');
 session_start();
+
+// ✅ Admin Auth (redirect if not logged in)
+if (!isset($_SESSION['username']) || trim($_SESSION['username']) === '') {
+    header("Location: login.php");
+    exit();
+}
+require('../config/connection.php');
 
 if($_SESSION['username'] == null){
     header("Location: login.php");

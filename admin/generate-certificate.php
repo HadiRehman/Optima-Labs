@@ -93,6 +93,11 @@ if (isset($_GET['id'])) {
                             <i class="bi bi-map"></i> <span class="ms-1 d-none d-sm-inline">Certificates</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="manage-blogs.php" class="nav-link px-0 align-middle text-dark">
+                            <i class="bi bi-journal-text"></i> <span class="ms-1 d-none d-sm-inline">Manage Blogs</span>
+                        </a>
+                    </li>
                 </ul>
                 <hr />
                 <div class="dropdown pb-4">

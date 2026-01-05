@@ -186,13 +186,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="section"><span class="title">Lab Test Number:</span> <?= htmlspecialchars($certificate['lab_test_number'] ?? '866402') ?></div>
 
+        <?php 
+            if($certificate['note'])
+            {
+        ?>
         <div class="section">
             <span class="title">Additional Information / Notes:</span><br>
             <small>
                 <?= htmlspecialchars($certificate['note']) ?>
             </small>
         </div>
-
+        <?php
+            }
+        ?>
         <div class="sign-area">
             <div class="section"><span class="title">COA Approved By:</span> QC Analyst & Lab Lead - R. Schneider</div>
 

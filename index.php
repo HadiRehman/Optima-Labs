@@ -153,7 +153,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <br><br>
         <div class="row section">
-            <div class="col-sm-12"><span class="title">Client Name:</span> Peptides UK - <a href="https://peptidesuk.co.uk/">peptidesuk.co.uk</a></div>
+            <div class="col-sm-12"><span class="title">Client Name:</span> Peptides Lab UK - <a href="https://peptideslabuk.com/">peptidesuk.co.uk</a></div>
         </div>
         <div class="row section">
             <div class="col-sm-6"><span class="title">Product ID:</span> <?= htmlspecialchars($certificate['cat_no']) ?></div>

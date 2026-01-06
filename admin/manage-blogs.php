@@ -236,7 +236,7 @@ $resAll = $con->query("SELECT id, title, slug, featured_image, status, created_a
                     </li>
 
                     <li>
-                        <a href="manage-blogs.php" class="nav-link px-0 align-middle text-dark active">
+                        <a href="manage-blogs.php" class="nav-link px-0 align-middle text-dark">
                             <i class="bi bi-journal-text"></i> <span class="ms-1 d-none d-sm-inline">Manage Blogs</span>
                         </a>
                     </li>
@@ -308,7 +308,7 @@ $resAll = $con->query("SELECT id, title, slug, featured_image, status, created_a
 
                                     <?php if (!empty($edit['featured_image'])): ?>
                                         <div class="mt-2">
-                                            <img class="thumb" src="<?php echo htmlspecialchars(img_url_admin($edit['featured_image'])); ?>"
+                                            <img class="thumb" src="<?php echo htmlspecialchars($edit['featured_image'] ?? '');  ?>"
                                                  onerror="this.onerror=null;this.src='../assets/images/lab-image.jpeg';" alt="">
                                         </div>
                                     <?php endif; ?>
@@ -362,7 +362,7 @@ $resAll = $con->query("SELECT id, title, slug, featured_image, status, created_a
                                                 <td>
                                                     <?php if(!empty($b['featured_image'])): ?>
                                                         <img class="thumb"
-                                                             src="<?php echo htmlspecialchars(img_url_admin($b['featured_image'])); ?>"
+                                                             src="<?php echo htmlspecialchars($b['featured_image']); ?>"
                                                              onerror="this.onerror=null;this.src='../assets/images/lab-image.jpeg';"
                                                              alt="">
                                                     <?php else: ?>

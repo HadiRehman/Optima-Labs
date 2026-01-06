@@ -66,6 +66,11 @@ $con->close();
                                         <i class="bi bi-map"></i> <span class="ms-1 d-none d-sm-inline">Certificates</span></a>
                                 </li>
 
+                                <li>
+                                    <a href="manage-blogs.php" class="nav-link px-0 align-middle text-dark">
+                                        <i class="bi bi-journal-text"></i> <span class="ms-1 d-none d-sm-inline">Manage Blogs</span>
+                                    </a>
+                                </li>
                                 <!-- <li>
                                     <a href="allleads" class="nav-link px-0 align-middle text-dark">
                                         <i class="bi bi-clipboard-data"></i> <span class="ms-1 d-none d-sm-inline">All Data</span></a>

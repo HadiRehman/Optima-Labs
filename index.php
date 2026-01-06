@@ -157,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="row section">
             <div class="col-sm-6"><span class="title">Product ID:</span> <?= htmlspecialchars($certificate['cat_no']) ?></div>
-            <div class="col-sm-6"><span class="title">Batch Number:</span> <?= htmlspecialchars($certificate['batch_number'] ?? '25066A') ?></div>
+            <div class="col-sm-6"><span class="title">Batch Number:</span> <?= htmlspecialchars($certificate['batch_no'] ?? '25066A') ?></div>
         </div>
 
         <div class="row section">

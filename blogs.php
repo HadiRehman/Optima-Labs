@@ -112,7 +112,7 @@ function excerpt_words($html, $limit = 10) {
           $desc = excerpt_words($row['content'] ?? '', 10);
         ?>
         <div class="blog-card" onclick="window.location.href='<?php echo $blogUrl; ?>'">
-          <img src="admin/<?php echo htmlspecialchars($row['featured_image']); ?>" onerror="this.src='assets/images/lab-image.jpeg';">
+          <img src="<?php echo htmlspecialchars($row['featured_image']); ?>" onerror="this.src='assets/images/lab-image.jpeg';">
 
 
           <div class="pad">

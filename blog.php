@@ -99,7 +99,7 @@ $img = !empty($blog['featured_image'])
   <div class="meta"><?php echo date("d M Y", strtotime($blog['created_at'])); ?></div>
 
   <div class="hero">
-    <img src="admin/<?php echo $blog['featured_image']; ?>" alt=""
+    <img src="<?php echo $blog['featured_image']; ?>" alt=""
          onerror="this.onerror=null;this.src='assets/images/lab-image.jpeg';">
   </div>
 

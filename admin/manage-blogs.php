@@ -308,7 +308,7 @@ $resAll = $con->query("SELECT id, title, slug, featured_image, status, created_a
 
                                     <?php if (!empty($edit['featured_image'])): ?>
                                         <div class="mt-2">
-                                            <img class="thumb" src="<?php echo htmlspecialchars($edit['featured_image'] ?? '');  ?>"
+                                            <img class="thumb" src="../<?php echo htmlspecialchars($edit['featured_image'] ?? '');  ?>"
                                                  onerror="this.onerror=null;this.src='../assets/images/lab-image.jpeg';" alt="">
                                         </div>
                                     <?php endif; ?>
@@ -362,8 +362,7 @@ $resAll = $con->query("SELECT id, title, slug, featured_image, status, created_a
                                                 <td>
                                                     <?php if(!empty($b['featured_image'])): ?>
                                                         <img class="thumb"
-                                                             src="<?php echo htmlspecialchars($b['featured_image']); ?>"
-                                                             onerror="this.onerror=null;this.src='../assets/images/lab-image.jpeg';"
+                                                             src="../<?php echo htmlspecialchars($b['featured_image']); ?>"
                                                              alt="">
                                                     <?php else: ?>
                                                         <span class="text-muted">—</span>

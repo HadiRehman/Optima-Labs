@@ -30,13 +30,23 @@ function make_slug($text) {
 }
 
 function sanitize_blog_html($html) {
-    $allowed = '<p><br><b><strong><i><em><u><ul><ol><li><h2><h3><blockquote><a>';
+    $allowed = '<p><br><b><strong><i><em><u><ul><ol><li><h2><h3><blockquote><a><img>';
     $html = strip_tags($html, $allowed);
 
-    // block javascript: links
-    $html = preg_replace_callback('/<a\s+[^>]*href=["\']([^"\']+)["\'][^>]*>/i', function($m) {
-        $href = $m[1];
-        if (preg_match('/^\s*javascript:/i', $href)) return '<a href="#">';
+    // remove inline event handlers (onclick, onerror, etc.)
+    $html = preg_replace('/\son\w+\s*=\s*"[^"]*"/i', '', $html);
+    $html = preg_replace("/\son\w+\s*=\s*'[^']*'/i", '', $html);
+
+    // block javascript: links in href/src
+    $html = preg_replace_callback('/<(a|img)\s+[^>]*(href|src)=["\']([^"\']+)["\'][^>]*>/i', function($m) {
+        $tag = strtolower($m[1]);
+        $attr = strtolower($m[2]);
+        $val = $m[3];
+
+        if (preg_match('/^\s*javascript:/i', $val)) {
+            if ($tag === 'a') return '<a href="#">';
+            if ($tag === 'img') return '<img src="">';
+        }
         return $m[0];
     }, $html);
 
@@ -414,8 +424,14 @@ tinymce.init({
   selector: '#content',
   height: 320,
   menubar: false,
-  plugins: 'link lists',
-  toolbar: 'undo redo | bold italic underline | bullist numlist | link',
+  plugins: 'link lists image',
+  toolbar: 'undo redo | bold italic underline | bullist numlist | link image',
+  automatic_uploads: true,
+  images_upload_url: 'upload-tinymce-image.php',
+  images_reuse_filename: false,
+  images_file_types: 'jpg,jpeg,png,webp',
+  relative_urls: false,
+  remove_script_host: true,
 });
 
 function searchTable() {
